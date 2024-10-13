@@ -2958,7 +2958,7 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
 // * React Element
-const jsxHeading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+const titleElement = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
     id: "head",
     className: "head",
     children: "Namaste React using JSX \u2693"
@@ -2967,8 +2967,8 @@ const jsxHeading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
     lineNumber: 7,
     columnNumber: 3
 }, undefined);
-// * React Function Components
-const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+// * React Functional Components
+const TitleComponent = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
         id: "head",
         className: "head",
         children: "Namaste React using JSX \u2693"
@@ -2977,26 +2977,31 @@ const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
         lineNumber: 15,
         columnNumber: 3
     }, undefined);
-_c = Title;
+_c = TitleComponent;
+const why = "this kolavari d";
 const HeadingComponent = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         id: "Container",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
+            titleElement,
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(TitleComponent, {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 22,
+                lineNumber: 25,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "This is Functional component!"
-            }, void 0, false, {
+                children: [
+                    "why ",
+                    why
+                ]
+            }, void 0, true, {
                 fileName: "App.js",
-                lineNumber: 23,
+                lineNumber: 26,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 21,
+        lineNumber: 23,
         columnNumber: 3
     }, undefined);
 _c1 = HeadingComponent;
@@ -3004,11 +3009,11 @@ _c1 = HeadingComponent;
 const rootDOM = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 rootDOM.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeadingComponent, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 30,
+    lineNumber: 33,
     columnNumber: 16
 }, undefined));
 var _c, _c1;
-$RefreshReg$(_c, "Title");
+$RefreshReg$(_c, "TitleComponent");
 $RefreshReg$(_c1, "HeadingComponent");
 
   $parcel$ReactRefreshHelpers$c1db.postlude(module);

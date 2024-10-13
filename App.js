@@ -3,24 +3,27 @@ import ReactDOM from "react-dom/client";
 
 // * React Element
 
-const jsxHeading = (
+const titleElement = (
   <h1 id="head" className="head">
     Namaste React using JSX ⚓
   </h1>
 );
 
-// * React Function Components
+// * React Functional Components
 
-const Title = () => (
+const TitleComponent = () => (
   <h1 id="head" className="head">
     Namaste React using JSX ⚓
   </h1>
 );
+
+const why = "this kolavari d";
 
 const HeadingComponent = () => (
   <div id="Container">
-    <Title />
-    <h1>This is Functional component!</h1>
+    {titleElement}
+    <TitleComponent />
+    <h1>why {why}</h1>
   </div>
 );
 
