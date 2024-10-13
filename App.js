@@ -1,32 +1,30 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// const heading = React.createElement(
-//   "h1",
-//   { id: "heading", xyz: "abc" },
-//   "Hello World from React!"
-// );
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(heading);
 
-// To create nested HTML structure like in React:
+// * React Element
 
-// <div id="parent">
-//   <div id="child">
-//     <h1>This is h1 tag!</h1>
-//   </div>
-// </div>
+const jsxHeading = (
+  <h1 id="head" className="head">
+    Namaste React using JSX ⚓
+  </h1>
+);
 
-const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child1" }, [
-    React.createElement("h1", {}, "This is h1 tag!"),
-    React.createElement("h2", {}, "This is h2 tag!"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", {}, "This is h1 tag!"),
-    React.createElement("h2", {}, "This is h2 tag!"),
-  ]),
-]);
+// * React Function Components
 
-console.log(parent);
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+const Title = () => (
+  <h1 id="head" className="head">
+    Namaste React using JSX ⚓
+  </h1>
+);
+
+const HeadingComponent = () => (
+  <div id="Container">
+    <Title />
+    <h1>This is Functional component!</h1>
+  </div>
+);
+
+// !Above is how we perform component composition
+
+const rootDOM = ReactDOM.createRoot(document.getElementById("root"));
+rootDOM.render(<HeadingComponent/>);
