@@ -3994,15 +3994,13 @@ const Body = ()=>{
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "restaurant-container",
-                children: resList.map((res)=>{
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
+                children: resList.map((res)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
                         resData: res
-                    }, void 0, false, {
+                    }, res?.info.id, false, {
                         fileName: "App.js",
                         lineNumber: 927,
                         columnNumber: 11
-                    }, undefined);
-                })
+                    }, undefined))
             }, void 0, false, {
                 fileName: "App.js",
                 lineNumber: 924,

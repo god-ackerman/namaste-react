@@ -923,9 +923,9 @@ const Body = () => {
       <div className="search">Search</div>
       <div className="restaurant-container">
         {/* We need to use functional components for reusability  */}
-        {resList.map((res) => {
-          <RestaurantCard resData={res} />;
-        })}
+        {resList.map((res) => (
+          <RestaurantCard key={res?.info.id} resData={res} />
+        ))}
       </div>
     </div>
   );
