@@ -52,4 +52,25 @@
   cursor: pointer;
   margin: 10px;
 }
+
+.shimmer-button {
+  background-color: #f0f0f0;
+  width: 150px;
+  height: 20px;
+  margin: 5px;
+}
+
+.shimmer-container {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.shimmer-card {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  width: 200px;
+  height: 450px;
+  margin: 5px;
+  padding: 5px;
+}
 /*# sourceMappingURL=index.9e4c6fd2.css.map */
