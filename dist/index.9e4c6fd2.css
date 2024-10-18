@@ -78,4 +78,18 @@
   width: 80px;
   padding: 10px;
 }
+
+.filter {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.search-bar {
+  cursor: text;
+  margin-right: 10px;
+}
+
+.search-button {
+  cursor: pointer;
+}
 /*# sourceMappingURL=index.9e4c6fd2.css.map */
