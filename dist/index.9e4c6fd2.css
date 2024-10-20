@@ -28,15 +28,25 @@
 }
 
 .restaurant-card {
+  color: #000;
+  background-color: #f0f0f0;
   border-radius: 10px;
   width: 200px;
   margin: 5px;
   padding: 5px;
+  text-decoration: none;
 }
 
 .restaurant-card:hover {
   cursor: pointer;
   border: 1px solid #000;
+}
+
+.restaurant-card:link, .restaurant-card:visited {
+  cursor: pointer;
+  color: #000;
+  border: 1px solid #000;
+  text-decoration: none;
 }
 
 .search {
@@ -92,5 +102,23 @@
 .search-button {
   cursor: pointer;
   margin-right: 10px;
+}
+
+.restaurant-title {
+  display: inline;
+}
+
+.filter-buttons {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.filter-veg {
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.show-all-btn {
+  padding: 5px;
 }
 /*# sourceMappingURL=index.9e4c6fd2.css.map */
