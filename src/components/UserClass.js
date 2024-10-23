@@ -4,6 +4,11 @@ class UserClass extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      userInfo: {
+        name: "Dummy",
+        login: "xyz",
+        avatar_url: "abc",
+      },
     };
   }
 
@@ -11,14 +16,21 @@ class UserClass extends React.Component {
     const data = await fetch("https://api.github.com/users/god-ackerman");
     const json = await data.json();
     console.log(json);
+
+    this.setState({
+      userInfo: json,
+    })
   }
 
   render() {
+    const {name, login, avatar_url} = this.state.userInfo;
     return (
       <div className="user-card">
-        <h2>Name: {this.props.name}</h2>
-        <h3>Location: {this.props.location}</h3>
-        <h4>Contact: god-ackerman</h4>
+        <img className="github-avatar" src={avatar_url}></img>
+        <div className="about-details-div">
+          <h2>Name: {name}</h2>
+          <h3>GIT ID: {login}</h3>
+        </div>
       </div>
     );
   }

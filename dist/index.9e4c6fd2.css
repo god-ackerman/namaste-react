@@ -124,7 +124,24 @@
 
 .user-card {
   border: 1px solid #000;
+  border-radius: 10px;
   margin: 10px;
+  padding: 10px;
+}
+
+.github-avatar {
+  border: 1px solid #000;
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+}
+
+.about-details-div {
+  float: right;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin-top: 40px;
   padding: 10px;
 }
 /*# sourceMappingURL=index.9e4c6fd2.css.map */
