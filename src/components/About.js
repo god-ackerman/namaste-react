@@ -8,7 +8,6 @@ class About extends React.Component {
     }
 
     componentDidMount() {
-
     }
 
     render() {
