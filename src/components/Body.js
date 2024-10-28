@@ -40,17 +40,17 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filter">
+      <div className="filter flex justify-between p-4">
         <div className="search">
           <input
-            className="search-bar"
+            className="search-bar px-2 mx-2 border border-solid border-black rounded-md w-60"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           />
           <button
-            className="search-button"
+            className="search-button px-4 py-1 mx-2 bg-gray-300 rounded-md"
             onClick={() => {
               const searchedRestaurants = listOfRestaurants.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -61,7 +61,7 @@ const Body = () => {
             Search
           </button>
           <button
-            className="show-all-btn"
+            className="show-all-btn px-2 py-1 mx-2 bg-gray-300 rounded-md"
             onClick={() => {
               setFilteredRestaurants(listOfRestaurants);
             }}
@@ -70,7 +70,7 @@ const Body = () => {
           </button>
         </div>
         <button
-          className="filter-btn"
+          className="filter-btn px-2 py-1 mx-2 bg-gray-300 rounded-md"
           onClick={() => {
             //Filter logic
             const filteredList = listOfRestaurants.filter(
@@ -82,7 +82,7 @@ const Body = () => {
           Top rated restaurants
         </button>
       </div>
-      <div className="restaurant-container">
+      <div className="restaurant-container flex flex-wrap">
         {/* We need to use functional components for reusability  */}
         {filteredRestaurants.map((res) => (
           <Link key={res?.info.id} to={"/restaurants/" + res?.info.id}>
