@@ -6,7 +6,7 @@ const RestaurantCard = (props) => {
     resData?.info;
   const { slaString } = resData?.info?.sla;         //delivery time
   return (
-    <div className="restaurant-card m-4 p-4 w-[250px] bg-gray-100">
+    <div className="restaurant-card m-4 p-4 w-[200px] h-[400px] rounded-lg bg-gray-100">
       <img
         className="res-logo"
         alt="res-logo"
