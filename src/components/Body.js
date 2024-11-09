@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard , { withOpenLabel , withClosedLabel } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import { RES_API } from "../utils/constants";
@@ -18,7 +18,7 @@ const Body = () => {
   const fetchData = async () => {
     const data = await fetch(RES_API);
     const json = await data.json();
-    //console.log(json);
+    console.log("Body rendered", listOfRestaurants);
     setListofRestaurants(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -27,8 +27,11 @@ const Body = () => {
     );
   };
 
-  if(useOnlineStatus() === false) {
-    return(
+  const RestaurantCardOpen = withOpenLabel(RestaurantCard);
+  const RestaurantCardClosed = withClosedLabel(RestaurantCard);
+
+  if (useOnlineStatus() === false) {
+    return (
       <div>
         <h1>Looks like you are offline!!</h1>
         <h2> Please check your internet connection!</h2>
@@ -86,7 +89,11 @@ const Body = () => {
         {/* We need to use functional components for reusability  */}
         {filteredRestaurants.map((res) => (
           <Link key={res?.info.id} to={"/restaurants/" + res?.info.id}>
-            <RestaurantCard resData={res} />
+            {res?.info.isOpen ? (
+              <RestaurantCardOpen resData={res} />
+            ) : (
+              <RestaurantCardClosed resData={res} />
+            )}
           </Link>
         ))}
       </div>
